@@ -5,175 +5,444 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
 
-    <!-- main headers and theirs options -->
-    <header>
-        <div>
-            <img src="logo" alt="logo">
-            <img src="menu" alt="menu">
-        </div>
+    <div class="container">
+        <div class="player">
+            <!-- main headers and theirs options -->
+            <header class="menu">
+                <div class="menu__top">
+                    <img class="menu__logo" src="./assest/images/logos/Pandora.png" alt="logo">
 
-        <h1>Music</h1>
+                    <svg class="menu__top-vw" viewBox="0 0 24 24">
+                        <path class="icon-grey" d="M3,13H15V11H3M3,6V8H21V6M3,18H9V16H3V18Z" />
+                    </svg>
+                </div>
 
-        <ul class="usual_options">
-            <li>Discover</li>
-            <li>Rising</li>
-            <li>Inspiration</li>
-            <li>My starts</li>
-        </ul>
+                <h1 class="menu__music">Music</h1>
 
-        <ul class="categories_options">
-            <li>Songs</li>
-            <li>Artists</li>
-            <li>Albums</li>
-            <li>Radio</li>
-        </ul>
-
-        <h1>Playlists<span>+</span></h1>
-        
-        <ul>
-            <li class="playing_right_now">UPlabs focus</li>
-            <li>
-                <h2>Golden 80s</h2>
-                <ul>
-                    <li>Gaming OSTs</li>
-                    <li>...</li>
+                <ul class="menu__usual-options">
+                    <li>Discover</li>
+                    <li>Rising</li>
+                    <li>Inspiration</li>
+                    <li>My starts</li>
                 </ul>
-            </li>
-            <li>
-                <h2>Playlist title</h2>
-                <ul>
-                    <li>Smash it!</li>
-                    <li>...</li>
+
+                <ul class="menu__categories-options">
+                    <li>Songs</li>
+                    <li>Artists</li>
+                    <li>Albums</li>
+                    <li>Radio</li>
                 </ul>
-            </li>
-        </ul>
 
-    </header>
+                <h1 class="menu__playlist">
+                    <span class="menu__playlist-title">Playlists</span>
+                    <svg class="menu__playlist-vw" viewBox="0 0 24 24">
+                        <path class="icon-blue" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                    </svg>
+                </h1>
 
-    <!-- main area -->
-    <main class="album_image">
-        <!-- playing-album image's has been set in the background property of this class-->
+                <ul class="menu__playlist-options">
+                    <li class="menu__playlist-options--green">UPlabs focus</li>
+                    <li class="menu__playlist-options--none">Golden 80s</li>
+                    <li class="menu__playlist-options--orange">Gaming OSTs</li>
+                    <li class="menu__playlist-options--none">Playlist title</h2>
+                    <li class="menu__playlist-options--violet">Smash it!</li>
+                </ul>
 
-        <section>
-            <div>
-                <img src="..." alt="icono lupa">
-                <input type="search" placeholder="Type here to search">
-            </div>
+            </header>
 
-            <div>
-                <p>user name</p>
-                <img src="..." alt="user image's">
-            </div>
-        </section>
+            <!-- main area -->
+            <main class="main-area">
 
-        <section>
-            <div class="favorites">
-                <button type="button">
-                    <span>start icon</span>Save to My stars
-                </button>
-            </div>
+                <section class="main-area__top">
+                    <div class="main-area__top-search">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                        </svg>
 
-            <div class="playing_album_title">
-                <p>Gorillaz</p>
-            </div>
-
-            <div class="tabs">
-                <button class="tablinks">Albums</button>
-                <button class="tablinks">About</button>
-                <button class="tablinks">Related artists</button>
-            </div>
-
-            <div class="albums_grid">
-                <div>
-                    <img src="..." alt="album image 1">
-                    <p>Album name 1<span>year of issue</span></p>
-                </div>
-
-                <div>
-                    <img src="..." alt="album image 2">
-                    <p>Album name 2<span>year of issue 2</span></p>
-                </div>
-
-                <div>
-                    <img src="..." alt="album image ...">
-                    <p>Album name ...<span>year of issue ...</span></p>
-                </div>
-            </div>
-
-            <div class="about">
-                <p>Tab About</p>
-            </div>
-
-            <div class="related_artists">
-                <p>Tab Related artists</p>
-            </div>
-
-        </section>
-
-        <aside>
-            <!-- linked to random-player icon bar's -->
-            <p class="play_option">Random selection</p>
-            <ul>
-                <li>
-                    <div>
-                        <span>name of the song</span>
-                        <span>band</span>
-                        <img src="..." alt="playing_now">
-                        <span>duration</span>
-                        <span class="more_info">+</span>
+                        <input class="main-area__top--field" type="search" placeholder="Type here to search">
+                        <span class="focus-border"></span>
                     </div>
-                </li>
-                <li>
-                    <div>
-                        <span>name of the son</span>
-                        <span>band</span>
-                        <img src="..." alt="popularity">
-                        <span>duration</span>
-                        <span class="more_options">+</span>
+
+                    <div class="main-area__top-avatar">
+                        <span class="main-area__top-avatar--name">Andrew Z</span>
+
+                        <div class="main-area__top-avatar-img">
+                            <img class="main-area__top-avatar-img--photo circle"
+                                src="./assest/images/avatars/avatar.jpg" alt="user image's">
+                            <span class="main-area__top-avatar-img--status">&nbsp</span>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </aside>
+                </section>
 
-    </main>
+                <section class="main-area__bottom">
+                    <section class="main-area__left">
+                        <button class="main-area__left--btn" type="button">
+                            <svg class="star" viewBox="0 0 24 24">
+                                <defs>
+                                    <linearGradient id="myGradient" gradientTransform="rotate(226deg)" x2="0" y2="1">
+                                        <stop offset="70%" stop-color="#933aaf" />
+                                        <stop offset="30%" stop-color="#e63c56" />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url('#myGradient')"
+                                    d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                            </svg>
+                            Save to My stars
+                        </button>
 
-    <!-- bar player's  -->
-    <section>
-        <div>
-            <img src="..." alt="album image">
+                        <span class="main-area__left--singer">Katy Perry</span>
+
+                        <div class="main-area__left--tabs">
+                            <a class="main-area__left--tab tab-selected">Albums</a>
+                            <a class="main-area__left--tab">About</a>
+                            <a class="main-area__left--tab">Related artists</a>
+                        </div>
+
+                        <div class="albums__grid">
+                            <div class="albums__grid--card">
+                                <img class="albums__grid--cover" src="./assest/images/covers/witness.jpg"
+                                    alt="album image 1">
+                                <span class="albums__grid--titled">Witness<span>
+                                        <span class="albums__grid--year">2017</span>
+                            </div>
+                            <div class="albums__grid--card">
+                                <img class="albums__grid--cover" src="./assest/images/covers/prism.jpg"
+                                    alt="album image 1">
+                                <span class="albums__grid--titled">PRISM<span>
+                                        <span class="albums__grid--year">2013</span>
+                            </div>
+                            <div class="albums__grid--card">
+                                <img class="albums__grid--cover" src="./assest/images/covers/teenage.jpg"
+                                    alt="album image 1">
+                                <span class="albums__grid--titled">Teenage Dream<span>
+                                        <span class="albums__grid--year">2012</span>
+                            </div>
+                            <div class="albums__grid--card">
+                                <img class="albums__grid--cover" src="./assest/images/covers/mtv.jpg"
+                                    alt="album image 1">
+                                <span class="albums__grid--titled">MTV<span>
+                                        <span class="albums__grid--year">2017</span>
+                            </div>
+                            <div class="albums__grid--card">
+                                <img class="albums__grid--cover" src="./assest/images/covers/oneoftheboys.jpg"
+                                    alt="album image 1">
+                                <span class="albums__grid--titled">One boy<span>
+                                        <span class="albums__grid--year">2013</span>
+                            </div>
+                            <div class="albums__grid--card">
+                                <img class="albums__grid--cover" src="./assest/images/covers/roar.jpg"
+                                    alt="album image 1">
+                                <span class="albums__grid--titled">Hear Us<span>
+                                        <span class="albums__grid--year">2012</span>
+                            </div>
+
+                            <div class="albums__grid--card">
+                                    <img class="albums__grid--cover" src="./assest/images/covers/mtv.jpg"
+                                        alt="album image 1">
+                                    <span class="albums__grid--titled">MTV<span>
+                                            <span class="albums__grid--year">2017</span>
+                                </div>
+                                <div class="albums__grid--card">
+                                    <img class="albums__grid--cover" src="./assest/images/covers/oneoftheboys.jpg"
+                                        alt="album image 1">
+                                    <span class="albums__grid--titled">One boy<span>
+                                            <span class="albums__grid--year">2013</span>
+                                </div>
+                                <div class="albums__grid--card">
+                                    <img class="albums__grid--cover" src="./assest/images/covers/roar.jpg"
+                                        alt="album image 1">
+                                    <span class="albums__grid--titled">Hear Us<span>
+                                            <span class="albums__grid--year">2012</span>
+                                </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="main-area__right">
+
+                        <span class="main-area__right-section">Random selection</span>
+                        <ul class="main-area__right-list">
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Awake</span>
+                                        <span class="main-area__right-card--author">Awake</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>3:43</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">A Walk</span>
+                                        <span class="main-area__right-card--author">Dive</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>3:17</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Melanine</span>
+                                        <span class="main-area__right-card--author">Dive</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>5:40</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Division</span>
+                                        <span class="main-area__right-card--author">Epoch</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>3:53</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Epoch</span>
+                                        <span class="main-area__right-card--author">Epoch</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>4:04</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Horizon - Poolside Remix</span>
+                                        <span class="main-area__right-card--author">Horizon</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>3:01</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Receiver</span>
+                                        <span class="main-area__right-card--author">Epoch</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>3:17</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Daydream</span>
+                                        <span class="main-area__right-card--author">DIVE</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>3:50</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Hours</span>
+                                        <span class="main-area__right-card--author">DIVE</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>4:01</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="main-area__right-card">
+                                    <div class="main-area__right-card--info">
+                                        <span class="main-area__right-card--title">Horizon</span>
+                                        <span class="main-area__right-card--author">Epoch</span>
+                                    </div>
+                                    <span class="main-area__right-card--long">
+                                        <span>3:17</span>
+                                        <svg  class="icon-add" viewBox="0 0 24 24">
+                                            <path class="icon-add-color" fill="#000000" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+
+
+
+
+                    </section>
+                </section>
+
+
+
+
+                <!-- <aside>
+                            <p class="play_option">Random selection</p>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <span>name of the song</span>
+                                        <span>band</span>
+                                        <img src="..." alt="playing_now">
+                                        <span>duration</span>
+                                        <span class="more_info">+</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span>name of the son</span>
+                                        <span>band</span>
+                                        <img src="..." alt="popularity">
+                                        <span>duration</span>
+                                        <span class="more_options">+</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside> -->
+
+            </main>
+
         </div>
 
-        <div>
-            <p class="playing_song">Rhinestone Eyes</p>
-            <p class="singer">Gorillaz</p>
+
+        <div class="control-bar">
+
+            <div class="control-bar__mini-cover">
+                <img class="control-bar__mini-cover--img" src="./assest/images/covers/flowers.jpg" alt="album image">
+            </div>
+
+            <div class="control-bar__info">
+                <p class="control-bar__album">Rhinestone Eyes</p>
+                <p class="control-bar__song">Gorillaz</p>
+            </div>
+
+            <div class="control-bar__controls">
+
+                <svg viewBox="0 0 24 24">
+                    <path class="icon"
+                        d="M17,3L22.25,7.5L17,12L22.25,16.5L17,21V18H14.26L11.44,15.18L13.56,13.06L15.5,15H17V12L17,9H15.5L6.5,18H2V15H5.26L14.26,6H17V3M2,6H6.5L9.32,8.82L7.2,10.94L5.26,9H2V6Z" />
+                </svg>
+
+                <svg viewBox="0 0 24 24">
+                    <path class="icon" d="M6,18V6H8V18H6M9.5,12L18,6V18L9.5,12Z" />
+                </svg>
+
+                <svg viewBox="0 0 24 24">
+                    <path class="icon"
+                        d="M13,16V8H15V16H13M9,16V8H11V16H9M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                </svg>
+
+
+                <svg viewBox="0 0 24 24">
+                    <path class="icon" d="M 18,6 V 18 H 16 V 6 h 2 M 14.5,12 6,18 V 6 Z" />
+                </svg>
+
+
+                <svg viewBox="0 0 24 24">
+                    <path class="icon"
+                        d="M12,18A6,6 0 0,1 6,12C6,11 6.25,10.03 6.7,9.2L5.24,7.74C4.46,8.97 4,10.43 4,12A8,8 0 0,0 12,20V23L16,19L12,15M12,4V1L8,5L12,9V6A6,6 0 0,1 18,12C18,13 17.75,13.97 17.3,14.8L18.76,16.26C19.54,15.03 20,13.57 20,12A8,8 0 0,0 12,4Z" />
+                </svg>
+
+            </div>
+
+            <div class="control-bar__volume">
+
+                <svg viewBox="0 0 24 24">
+                    <path class="icon"
+                        d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+                </svg>
+                <progress class="control-bar__volume--range" value="70" max="100"></progress>
+
+            </div>
+
+
+            <div class="control-bar__time">
+
+                <span class="control-bar__time--long">2:54</span>
+                <progress class="control-bar__time--bar" value="70" max="100"></progress>
+                <span class="control-bar__time--playtime">4:03</span>
+
+            </div>
+
+
+
+            <div class="control-bar__broadcast">
+                <svg viewBox="0 0 24 24">
+                    <path class="icon"
+                        d="M4.93,4.93C3.12,6.74 2,9.24 2,12C2,14.76 3.12,17.26 4.93,19.07L6.34,17.66C4.89,16.22 4,14.22 4,12C4,9.79 4.89,7.78 6.34,6.34L4.93,4.93M19.07,4.93L17.66,6.34C19.11,7.78 20,9.79 20,12C20,14.22 19.11,16.22 17.66,17.66L19.07,19.07C20.88,17.26 22,14.76 22,12C22,9.24 20.88,6.74 19.07,4.93M7.76,7.76C6.67,8.85 6,10.35 6,12C6,13.65 6.67,15.15 7.76,16.24L9.17,14.83C8.45,14.11 8,13.11 8,12C8,10.89 8.45,9.89 9.17,9.17L7.76,7.76M16.24,7.76L14.83,9.17C15.55,9.89 16,10.89 16,12C16,13.11 15.55,14.11 14.83,14.83L16.24,16.24C17.33,15.15 18,13.65 18,12C18,10.35 17.33,8.85 16.24,7.76M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z" />
+                </svg>
+            </div>
+
+            <div class="control-bar__list">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="#fff" d="M19,9H2V11H19V9M19,5H2V7H19V5M2,15H15V13H2V15M17,13V19L22,16L17,13Z" />
+                </svg>
+            </div>
         </div>
 
-        <div class="player_controls">
-            <img src="..." alt="random">
-            <img src="..." alt="previous">
-            <img src="..." alt="stop">
-            <img src="..." alt="play">
-            <img src="..." alt="next">
-            <img src="..." alt="loop">
-        </div>
 
-        <div>
-            <img src="..." alt="speaker">
-            <progress value="70" max="100"></progress>
-            <p>4:03</p>
-        </div>
-
-        <div>
-            <img src="..." alt="connect output to other devices">
-            <img src="..." alt="playlist">
-        </div>
-    </section>
+    </div>
 
 </body>
 
