@@ -482,6 +482,7 @@ progress::-webkit-progress-value {
 
 /* card 
 ----------------------------------- */
+
 .main-area__right-card {
     display: flex;
     justify-content: space-between;
@@ -491,7 +492,14 @@ progress::-webkit-progress-value {
     height: 58px;
     margin-right: 58px;
     position: relative;
-    z-index: 1;
+    z-index: 0;
+}
+
+.main-area__right-card:hover {
+    border-radius: 4px;
+    background: rgba(248, 246, 246, 0.8);
+    // box-shadow: inset 0px 0px 0px 500px rgba(24, 30, 40, 0.5);
+    cursor: pointer;
 }
 
 .main-area__right-card:before {
@@ -501,15 +509,17 @@ progress::-webkit-progress-value {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    background: url('/assest/images/covers/katy_perry_with_flowers.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 165px -50px;  
+    background-size: 100% auto;
+    z-index:-1;
 }
 
 .main-area__right-card:hover:before {
-    border-radius: 4px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(24, 30, 40, 0.31);
-    cursor: pointer;
+    z-index:-1;
+    filter: blur(10px);
 }
 
 .main-area__right-card:hover .icon-add {
@@ -521,13 +531,11 @@ progress::-webkit-progress-value {
     list-style: none;
 }
 
-
 .main-area__right-card--info {
     display: flex;
     flex-direction: column;
     margin-left: 23px;
 }
-
 
 .main-area__right-card--title {
     font-family: 'Open Sans', sans-serif;
