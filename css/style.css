@@ -465,7 +465,7 @@ progress::-webkit-progress-value {
 
 .main-area__right-card:hover {
   border-radius: 4px;
-  background: rgba(248, 246, 246, 0.8);
+  background-color: rgba(24, 30, 40, 0.31); 
   cursor: pointer;
 }
 
@@ -476,7 +476,7 @@ progress::-webkit-progress-value {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("/assest/images/covers/katy_perry_with_flowers.jpg");
+  background-image: url("/assest/images/covers/katy_perry_with_flowers.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 165px -50px;
